@@ -2,14 +2,16 @@
 	"name": "DelimitedText1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "HttpServer1",
+			"referenceName": "adlsdemotnc",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation"
+				"type": "AzureBlobFSLocation",
+				"fileName": "moviesDB.csv",
+				"fileSystem": "container1"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
