@@ -2,16 +2,12 @@
 	"name": "AzureSqlTable2",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "da100server",
+			"referenceName": "da100LS",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": [],
-		"typeProperties": {
-			"schema": "dbo.",
-			"table": "queryprofile"
-		}
+		"schema": []
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }
