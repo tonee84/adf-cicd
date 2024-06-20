@@ -44,6 +44,12 @@
 		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
 			"value": "1220-182553-began147"
 		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://mykeyvaultpt.vault.azure.net/"
+		},
+		"AzureKeyVault2_properties_typeProperties_baseUrl": {
+			"value": "https://mykeyvaultpt.vault.azure.net/"
+		},
 		"FileServer1_properties_typeProperties_host": {
 			"value": "\\\\vmwin10\\e$"
 		},
@@ -70,12 +76,6 @@
 		},
 		"adlsdemotnc_properties_typeProperties_url": {
 			"value": "https://adlsdemotnc.dfs.core.windows.net/"
-		},
-		"AzureKeyVault1_properties_typeProperties_baseUrl": {
-			"value": "https://mykeyvaultpt.vault.azure.net/"
-		},
-		"AzureKeyVault2_properties_typeProperties_baseUrl": {
-			"value": "https://mykeyvaultpt.vault.azure.net/"
 		}
 	}
 }
