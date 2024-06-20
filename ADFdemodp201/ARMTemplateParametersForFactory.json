@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADFdemodp201"
+		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"value": ""
+		},
+		"FileServer1_password": {
+			"value": ""
+		},
+		"FileServerWin10LS_password": {
+			"value": ""
+		},
+		"SqlServer1aw2014_connectionString": {
+			"value": "Integrated Security=True;Data Source=vmwin10\\mssqlserverdev;Initial Catalog=adventureworks2014"
+		},
+		"SqlServer1aw2014_password": {
+			"value": ""
+		},
+		"SqlServer1nl_connectionString": {
+			"value": ""
+		},
+		"SqlServerlocal_connectionString": {
+			"value": "Integrated Security=True;Data Source=vmwin10\\mssqlserverdev;Initial Catalog=stackoverflow2010"
+		},
+		"SqlServerlocal_password": {
+			"value": ""
+		},
+		"SqlServerwin10LS_connectionString": {
+			"value": "Integrated Security=True;Data Source=VMwin10\\MSSQLSERVERDEV;Initial Catalog=adventureworksdw2020"
+		},
+		"SqlServerwin10LS_password": {
+			"value": ""
+		},
+		"da100LS_connectionString": {
+			"value": ""
+		},
+		"adlsdemotnc_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "1220-182553-began147"
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"value": "\\\\vmwin10\\e$"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"value": "vmwin10\\toan.phungquang"
+		},
+		"FileServerWin10LS_properties_typeProperties_host": {
+			"value": "e:\\"
+		},
+		"FileServerWin10LS_properties_typeProperties_userId": {
+			"value": "vmwin10\\toan.phungquang"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/djpmsft/adf-ready-demo/master/moviesDB.csv"
+		},
+		"SqlServer1aw2014_properties_typeProperties_userName": {
+			"value": "vmwin10\\toan.phungquang"
+		},
+		"SqlServerlocal_properties_typeProperties_userName": {
+			"value": "vmwin10\\toan.phungquang"
+		},
+		"SqlServerwin10LS_properties_typeProperties_userName": {
+			"value": "vmwin10\\toan.phungquang"
+		},
+		"adlsdemotnc_properties_typeProperties_url": {
+			"value": "https://adlsdemotnc.dfs.core.windows.net/"
+		}
+	}
+}

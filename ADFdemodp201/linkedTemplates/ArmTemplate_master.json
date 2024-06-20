@@ -1,0 +1,226 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "ADFdemodp201"
+		},
+		"AzureDatabricks1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
+		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSynapseAnalytics1'"
+		},
+		"FileServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'FileServer1'"
+		},
+		"FileServerWin10LS_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'FileServerWin10LS'"
+		},
+		"SqlServer1aw2014_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer1aw2014'",
+			"defaultValue": "Integrated Security=True;Data Source=vmwin10\\mssqlserverdev;Initial Catalog=adventureworks2014"
+		},
+		"SqlServer1aw2014_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer1aw2014'"
+		},
+		"SqlServer1nl_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer1nl'"
+		},
+		"SqlServerlocal_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServerlocal'",
+			"defaultValue": "Integrated Security=True;Data Source=vmwin10\\mssqlserverdev;Initial Catalog=stackoverflow2010"
+		},
+		"SqlServerlocal_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServerlocal'"
+		},
+		"SqlServerwin10LS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServerwin10LS'",
+			"defaultValue": "Integrated Security=True;Data Source=VMwin10\\MSSQLSERVERDEV;Initial Catalog=adventureworksdw2020"
+		},
+		"SqlServerwin10LS_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServerwin10LS'"
+		},
+		"da100LS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'da100LS'"
+		},
+		"adlsdemotnc_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'adlsdemotnc'"
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "1220-182553-began147"
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "\\\\vmwin10\\e$"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "vmwin10\\toan.phungquang"
+		},
+		"FileServerWin10LS_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "e:\\"
+		},
+		"FileServerWin10LS_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "vmwin10\\toan.phungquang"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/djpmsft/adf-ready-demo/master/moviesDB.csv"
+		},
+		"SqlServer1aw2014_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "vmwin10\\toan.phungquang"
+		},
+		"SqlServerlocal_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "vmwin10\\toan.phungquang"
+		},
+		"SqlServerwin10LS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "vmwin10\\toan.phungquang"
+		},
+		"adlsdemotnc_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdemotnc.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "ADFdemodp201_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDatabricks1_accessToken": {
+						"value": "[parameters('AzureDatabricks1_accessToken')]"
+					},
+					"AzureSynapseAnalytics1_connectionString": {
+						"value": "[parameters('AzureSynapseAnalytics1_connectionString')]"
+					},
+					"SqlServer1nl_connectionString": {
+						"value": "[parameters('SqlServer1nl_connectionString')]"
+					},
+					"da100LS_connectionString": {
+						"value": "[parameters('da100LS_connectionString')]"
+					},
+					"adlsdemotnc_accountKey": {
+						"value": "[parameters('adlsdemotnc_accountKey')]"
+					},
+					"FileServer1_password": {
+						"value": "[parameters('FileServer1_password')]"
+					},
+					"FileServerWin10LS_password": {
+						"value": "[parameters('FileServerWin10LS_password')]"
+					},
+					"SqlServer1aw2014_connectionString": {
+						"value": "[parameters('SqlServer1aw2014_connectionString')]"
+					},
+					"SqlServer1aw2014_password": {
+						"value": "[parameters('SqlServer1aw2014_password')]"
+					},
+					"SqlServerlocal_connectionString": {
+						"value": "[parameters('SqlServerlocal_connectionString')]"
+					},
+					"SqlServerlocal_password": {
+						"value": "[parameters('SqlServerlocal_password')]"
+					},
+					"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricks1_properties_typeProperties_existingClusterId')]"
+					},
+					"HttpServer1_properties_typeProperties_url": {
+						"value": "[parameters('HttpServer1_properties_typeProperties_url')]"
+					},
+					"adlsdemotnc_properties_typeProperties_url": {
+						"value": "[parameters('adlsdemotnc_properties_typeProperties_url')]"
+					},
+					"FileServer1_properties_typeProperties_host": {
+						"value": "[parameters('FileServer1_properties_typeProperties_host')]"
+					},
+					"FileServer1_properties_typeProperties_userId": {
+						"value": "[parameters('FileServer1_properties_typeProperties_userId')]"
+					},
+					"FileServerWin10LS_properties_typeProperties_host": {
+						"value": "[parameters('FileServerWin10LS_properties_typeProperties_host')]"
+					},
+					"FileServerWin10LS_properties_typeProperties_userId": {
+						"value": "[parameters('FileServerWin10LS_properties_typeProperties_userId')]"
+					},
+					"SqlServer1aw2014_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer1aw2014_properties_typeProperties_userName')]"
+					},
+					"SqlServerlocal_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServerlocal_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "ADFdemodp201_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"SqlServerwin10LS_connectionString": {
+						"value": "[parameters('SqlServerwin10LS_connectionString')]"
+					},
+					"SqlServerwin10LS_password": {
+						"value": "[parameters('SqlServerwin10LS_password')]"
+					},
+					"SqlServerwin10LS_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServerwin10LS_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ADFdemodp201_ArmTemplate_0')]"
+			]
+		}
+	]
+}
