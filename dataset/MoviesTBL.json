@@ -1,0 +1,17 @@
+{
+	"name": "MoviesTBL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "da100server",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "movies"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

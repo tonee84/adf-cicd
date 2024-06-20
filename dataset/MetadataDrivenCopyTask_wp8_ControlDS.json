@@ -1,0 +1,20 @@
+{
+	"name": "MetadataDrivenCopyTask_wp8_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "da100LS",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_wp8_20221209"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "meta",
+			"table": "MainControlTable_wp8"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
